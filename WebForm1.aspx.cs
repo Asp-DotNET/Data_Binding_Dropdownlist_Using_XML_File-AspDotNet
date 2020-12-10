@@ -18,6 +18,9 @@ namespace Data_Binding_Dropdownlist_Using_XML_File_AspDotNet
             DropDownList1.DataValueField = "CountryId";
             DropDownList1.DataSource = DS;
             DropDownList1.DataBind();
+
+            ListItem li = new ListItem("Select", "-1");
+            DropDownList1.Items.Insert(0, li);
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
